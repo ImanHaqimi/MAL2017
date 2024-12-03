@@ -1,12 +1,12 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#92D0D7"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_gradient"
+    tools:context=".Login">
 
-    <!-- Background Image -->
     <ImageView
         android:id="@+id/imageViewBackground"
         android:layout_width="match_parent"
@@ -19,12 +19,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dining_outdoor_beautiful_sea_view_beach_dining_outdoor_sea_view_beach_ocean_restaurant_table_beachfront_restaurant_326433366" />
 
-    <!-- Title Text -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/inter_bold"
         android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -36,9 +35,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.392" />
 
-    <!-- CardView for Login Section -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewLogin"
         android:layout_width="match_parent"
@@ -48,20 +46,19 @@
         app:cardCornerRadius="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp">
 
-            <!-- Welcome Text -->
             <TextView
                 android:id="@+id/textViewWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
+                android:fontFamily="@font/inter_bold"
                 android:text="Welcome Back"
                 android:textColor="#000000"
                 android:textSize="30sp"
@@ -70,7 +67,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Username EditText -->
+            <TextView
+                android:id="@+id/textViewLoginPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Login to your account"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewWelcome" />
+
             <EditText
                 android:id="@+id/editTextUsername"
                 android:layout_width="0dp"
@@ -81,16 +91,29 @@
                 android:hint="Username"
                 android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textViewLoginPrompt" />
 
-            <!-- Password EditText -->
+            <TextView
+                android:id="@+id/wrongUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/red"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextUsername"
+                tools:ignore="MissingConstraints" />
+
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/edittext_background"
                 android:gravity="center"
                 android:hint="Password"
@@ -101,60 +124,69 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextUsername" />
 
-            <!-- Forgot Password Text -->
+            <TextView
+                android:id="@+id/wrongPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/red"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewForgotPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+                tools:ignore="MissingConstraints" />
+
             <TextView
                 android:id="@+id/textViewForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:minHeight="48dp"
                 android:text="Forgot Password?"
-                android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
-            <!-- Login Button -->
             <Button
                 android:id="@+id/buttonLogin"
                 android:layout_width="165dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:backgroundTint="#000000"
+                android:fontFamily="@font/inter_bold"
                 android:text="Login"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textViewForgotPassword" />
 
-            <!-- Signup Text -->
             <TextView
                 android:id="@+id/textViewSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:fontFamily="@font/inter_bold"
+                android:minHeight="48dp"
                 android:text="Don’t have an account? Sign up"
                 android:textColor="#000000"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
-
-            <!-- Login Prompt Text -->
-            <TextView
-                android:id="@+id/textViewLoginPrompt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Login to your account"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewWelcome" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

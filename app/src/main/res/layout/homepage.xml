@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFF8FF"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_gradient"
+    tools:context=".Login">
 
-    <!-- Background CardView -->
+    <!-- Background CardView with Gradient -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewBackground"
         android:layout_width="match_parent"
         android:layout_height="162dp"
-        app:cardBackgroundColor="#FFEFD5"
+        android:background="@drawable/card_gradient_background"
         app:cardCornerRadius="22dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:layout_margin="16dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/meal_image"
+        android:src="@drawable/meal1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMeal" />
@@ -96,17 +96,18 @@
         android:layout_margin="16dp"
         android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/table_image"
+        android:src="@drawable/table1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textSecureTable" />
 
     <Button
         android:id="@+id/buttonMenu"
-        android:layout_width="wrap_content"
+        android:layout_width="148dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="-20dp"
         android:backgroundTint="#0000FF"
+        android:fontFamily="@font/inter_bold"
         android:text="Menu"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,10 +116,11 @@
 
     <Button
         android:id="@+id/buttonBookNow"
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="212dp"
         android:backgroundTint="#0000FF"
+        android:fontFamily="@font/inter_bold"
         android:text="Book Now"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -178,9 +180,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Home Icon (Center) -->
-
-            <!-- Profile Icon -->
+            <!-- Home Icon -->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -202,6 +202,8 @@
                     android:textColor="#000"
                     android:textSize="12sp" />
             </LinearLayout>
+
+            <!-- Profile Icon -->
 
             <LinearLayout
                 android:layout_width="0dp"
