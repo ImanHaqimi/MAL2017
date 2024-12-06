@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Name"
-            android:textSize="28dp"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView5"
             app:layout_constraintStart_toStartOf="@+id/imageView5"
@@ -72,15 +72,19 @@
             android:layout_marginBottom="15dp"
             android:backgroundTint="#FFFFFF"
             android:fontFamily="@font/inter_bold"
-            android:gravity="left"
             android:text="My Bookings"
             android:textColor="#000000"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/buttonFeedback"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1" />
+            android:textSize="18sp"
+            android:gravity="center|start"
+            android:drawableEnd="@drawable/ic_next"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFeedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
         <Button
             android:id="@+id/buttonFeedback"
@@ -90,14 +94,28 @@
             android:layout_marginBottom="76dp"
             android:backgroundTint="#FFFFFF"
             android:fontFamily="@font/inter_bold"
-            android:gravity="left"
             android:text="Give us Feedback"
             android:textColor="#000000"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            android:textSize="18sp"
+            android:gravity="center|start"
+            android:drawableEnd="@drawable/ic_next"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMyBookings" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="466dp"
+            android:layout_height="74dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonMyBookings" />
+            app:menu="@menu/bottom_nav_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
