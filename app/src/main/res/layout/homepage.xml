@@ -7,12 +7,11 @@
     android:background="@drawable/background_gradient"
     tools:context=".HomePage">
 
-    <!-- Background CardView with Gradient -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewBackground"
         android:layout_width="match_parent"
         android:layout_height="162dp"
-        android:background="@drawable/card_gradient_background"
+        app:cardBackgroundColor="#FFEFD5"
         app:cardCornerRadius="22dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,9 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-    <!-- Welcome Text -->
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"
@@ -47,7 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Subtitle Text -->
     <TextView
         android:id="@+id/textSubtitle"
         android:layout_width="wrap_content"
@@ -61,7 +56,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textWelcome" />
 
-    <!-- Search Bar -->
     <EditText
         android:id="@+id/editTextSearch"
         android:layout_width="0dp"
@@ -79,7 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textSubtitle" />
 
-    <!-- Meal Section -->
     <TextView
         android:id="@+id/textMeal"
         android:layout_width="wrap_content"
@@ -105,7 +98,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textMeal" />
 
-    <!-- Menu Button -->
     <Button
         android:id="@+id/buttonMenu"
         android:layout_width="148dp"
@@ -119,7 +111,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageMeal" />
 
-    <!-- Secure Your Table Section -->
     <TextView
         android:id="@+id/textSecureTable"
         android:layout_width="wrap_content"
@@ -145,15 +136,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textSecureTable" />
 
-    <!-- Book Now Button -->
-
-    <!-- Bottom Navigation Bar -->
-
     <Button
         android:id="@+id/buttonBookNow"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="132dp"
         android:backgroundTint="#0000FF"
         android:fontFamily="@font/inter_bold"
         android:text="Book Now"
