@@ -34,10 +34,40 @@
             android:name=".HomePage"
             android:exported="true" />
 
-        <!-- Menu Activity -->
+        <!-- History Activity -->
         <activity
-            android:name=".MenuActivity"
+            android:name=".History"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".Profile"
             android:exported="true" />
+
+        <activity
+            android:name=".Booking"
+            android:exported="true" />
+
+        <activity
+            android:name=".Table"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Receipt"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Cancel"
+            android:exported="true"/>
+
+        <activity
+            android:name=".viewbooking"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Update"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

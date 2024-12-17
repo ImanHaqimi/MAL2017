@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    tools:context=".viewbooking">
+    tools:context=".History">
 
     <!-- Header Card -->
     <androidx.cardview.widget.CardView
@@ -88,11 +88,11 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/pending_title"
+                android:id="@+id/approved_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pending"
-                android:textColor="#FF6B6B"
+                android:text="Approved"
+                android:textColor="#00A8A8"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +106,7 @@
                 android:text="ID:"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pending_title" />
+                app:layout_constraintTop_toBottomOf="@id/approved_title" />
 
             <TextView
                 android:id="@+id/id"
@@ -117,7 +117,7 @@
                 android:text="test"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@id/id_label"
-                app:layout_constraintTop_toBottomOf="@id/pending_title" />
+                app:layout_constraintTop_toBottomOf="@id/approved_title" />
 
             <!-- Additional Labels for Pending -->
             <TextView
@@ -212,27 +212,6 @@
 
             <!-- Buttons -->
 
-            <Button
-                android:id="@+id/modify_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="92dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Modify"
-                android:textColor="#00A8A8"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pending_table" />
-
-            <Button
-                android:id="@+id/cancel_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Cancel"
-                android:textColor="#FF6B6B"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/modify_button" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -241,12 +220,13 @@
         android:id="@+id/approved_card"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#61FF9B"
         app:cardCornerRadius="20dp"
         app:cardElevation="4dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pending_card">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -255,11 +235,11 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/approved_title"
+                android:id="@+id/complete_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Approved"
-                android:textColor="#00A8A8"
+                android:text="Complete"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -274,7 +254,7 @@
                 android:text="ID:"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_title" />
+                app:layout_constraintTop_toBottomOf="@id/complete_title" />
 
             <TextView
                 android:id="@+id/approved_id"
@@ -284,7 +264,7 @@
                 android:text="test"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@id/approved_id_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_title" />
+                app:layout_constraintTop_toBottomOf="@id/complete_title" />
 
             <!-- Additional Labels for Approved -->
             <TextView
@@ -380,6 +360,19 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/home2"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/inter_bold"
+        android:text="Return to homepage"
+        android:textColor="#00AAE2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

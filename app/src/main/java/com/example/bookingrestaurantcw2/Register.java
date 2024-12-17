@@ -1,6 +1,5 @@
 package com.example.bookingrestaurantcw2;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,7 +18,6 @@ public class Register extends AppCompatActivity {
     private EditText username, email, phone, password;
     private TextView usernameError, emailError, phoneError, passwordError;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,26 +25,25 @@ public class Register extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(this);
 
-        // Find views
+        // Initialize Views
         username = findViewById(R.id.editTextUsername);
         email = findViewById(R.id.editTextEmail);
-        phone = findViewById(R.id.editTextPhone); // Changed to Phone
-        password = findViewById(R.id.editTextPassword); // Changed to Password
+        phone = findViewById(R.id.editTextPhone);
+        password = findViewById(R.id.editTextPassword);
         usernameError = findViewById(R.id.wrongUsername);
         emailError = findViewById(R.id.wrongEmail);
-        phoneError = findViewById(R.id.wrongPhone); // Added for Phone validation
+        phoneError = findViewById(R.id.wrongPhone);
         passwordError = findViewById(R.id.wrongPassword);
 
         Button registerButton = findViewById(R.id.buttonRegister);
         Button loginButton = findViewById(R.id.buttonLogin);
 
         registerButton.setOnClickListener(v -> {
-            // Clear previous error messages
             clearErrorMessages();
 
             String uname = username.getText().toString().trim();
             String uemail = email.getText().toString().trim();
-            String uphone = phone.getText().toString().trim(); // Phone input
+            String uphone = phone.getText().toString().trim();
             String upass = password.getText().toString().trim();
 
             if (validateInput(uname, uemail, uphone, upass)) {
@@ -85,8 +82,8 @@ public class Register extends AppCompatActivity {
             isValid = false;
         }
 
-        if (uphone.isEmpty() || !uphone.matches("\\d{10}")) { // Validates 10-digit phone number
-            phoneError.setText("Please enter a valid phone number");
+        if (uphone.isEmpty() || !uphone.matches("\\d{10}")) {
+            phoneError.setText("Please enter a valid 10-digit phone number");
             isValid = false;
         }
 
@@ -144,7 +141,6 @@ public class Register extends AppCompatActivity {
 
         long rowId = db.insert(DatabaseHelper.TABLE_USER, null, values);
         db.close();
-
         return rowId != -1;
     }
 

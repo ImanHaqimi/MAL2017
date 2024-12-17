@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient">
+    android:background="@drawable/background_gradient"
+    tools:context=".Booking">
 
     <!-- CardView for Header -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewBackground"
-        android:layout_width="match_parent"
-        android:layout_height="162dp"
+        android:layout_width="446dp"
+        android:layout_height="118dp"
         app:cardBackgroundColor="#FFEFD5"
         app:cardCornerRadius="22dp"
         app:cardElevation="0dp"
@@ -20,14 +21,14 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="107dp">
 
             <ImageView
                 android:id="@+id/iconExit"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
                 android:contentDescription="Back"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
@@ -141,11 +142,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Bottom Navigation View -->
+
     <Button
         android:id="@+id/buttonChooseTable"
         android:layout_width="210dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="#0036BE"
         android:fontFamily="@font/inter_bold"
         android:text="Choose Table"
@@ -155,7 +158,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"

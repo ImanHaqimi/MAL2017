@@ -140,12 +140,12 @@
         android:id="@+id/buttonBookNow"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="128dp"
         android:backgroundTint="#0000FF"
         android:fontFamily="@font/inter_bold"
         android:text="Book Now"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

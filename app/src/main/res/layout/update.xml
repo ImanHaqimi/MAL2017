@@ -9,7 +9,8 @@
         android:id="@+id/customerIDEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Customer ID"/>
+        android:hint="Customer ID"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/customerNameEditText"
@@ -17,46 +18,51 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/customerIDEditText"
         android:layout_marginTop="8dp"
-        android:hint="Customer Phone"/>
+        android:hint="Customer Name"
+        android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/seatingAreaEditText"
+        android:id="@+id/mealtimeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/customerNameEditText"
         android:layout_marginTop="8dp"
-        android:hint="Seating Area"/>
+        android:hint="Meal Time"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/areaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mealtimeEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Area"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/tablesizeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/areaEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Table Size"
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/dateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seatingAreaEditText"
+        android:layout_below="@id/tablesizeEditText"
         android:layout_marginTop="8dp"
-        android:hint="Date"/>
-
-    <EditText
-        android:id="@+id/mealTimeEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dateEditText"
-        android:layout_marginTop="8dp"
-        android:hint="Meal Time"/>
-
-    <EditText
-        android:id="@+id/tableSizeEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mealTimeEditText"
-        android:layout_marginTop="8dp"
-        android:inputType="number"
-        android:hint="Table Size"/>
+        android:hint="Date"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/updateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tableSizeEditText"
+        android:layout_below="@id/dateEditText"
         android:layout_marginTop="16dp"
         android:text="Update"/>
 

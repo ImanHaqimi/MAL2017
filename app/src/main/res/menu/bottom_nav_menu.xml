@@ -1,9 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/navigation_booking"
         android:icon="@drawable/ic_booking"
-        android:title="Booking" />
+    android:title="Booking" />
 
     <item
         android:id="@+id/navigation_home"

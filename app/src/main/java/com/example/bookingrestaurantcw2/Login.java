@@ -39,12 +39,6 @@ public class Login extends AppCompatActivity {
         // Handle Login Button Click
         loginButton.setOnClickListener(this::onClick);
 
-        // Handle Forgot Password Text Click
-        forgotPasswordTextView.setOnClickListener(view -> {
-            Intent intent = new Intent(Login.this, ForgotPasswordActivity.class);
-            startActivity(intent);
-        });
-
         // Handle Sign Up Text Click
         signupTextView.setOnClickListener(view -> {
             Intent intent = new Intent(Login.this, Register.class);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    tools:context=".viewbooking">
+    tools:context=".Booking">
 
     <!-- Header Card -->
     <androidx.cardview.widget.CardView
@@ -88,10 +88,10 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/pending_title"
+                android:id="@+id/canceled_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pending"
+                android:text="Canceled"
                 android:textColor="#FF6B6B"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -106,7 +106,7 @@
                 android:text="ID:"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pending_title" />
+                app:layout_constraintTop_toBottomOf="@id/canceled_title" />
 
             <TextView
                 android:id="@+id/id"
@@ -117,7 +117,7 @@
                 android:text="test"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@id/id_label"
-                app:layout_constraintTop_toBottomOf="@id/pending_title" />
+                app:layout_constraintTop_toBottomOf="@id/canceled_title" />
 
             <!-- Additional Labels for Pending -->
             <TextView
@@ -212,174 +212,36 @@
 
             <!-- Buttons -->
 
-            <Button
-                android:id="@+id/modify_button"
+            <TextView
+                android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="92dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginBottom="8dp"
                 android:backgroundTint="#FFFFFF"
-                android:text="Modify"
-                android:textColor="#00A8A8"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pending_table" />
-
-            <Button
-                android:id="@+id/cancel_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:backgroundTint="#FFFFFF"
-                android:text="Cancel"
+                android:fontFamily="@font/inter_bold"
+                android:text="Canceled"
                 android:textColor="#FF6B6B"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/modify_button" />
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <!-- Approved Booking Card -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/approved_card"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toStartOf="parent"
+
+    <Button
+        android:id="@+id/home2"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/inter_bold"
+        android:text="Return to homepage"
+        android:textColor="#00AAE2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pending_card">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/approved_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Approved"
-                android:textColor="#00A8A8"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- ID Label for Approved -->
-
-            <TextView
-                android:id="@+id/approved_id_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ID:"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_title" />
-
-            <TextView
-                android:id="@+id/approved_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="test"
-                android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@id/approved_id_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_title" />
-
-            <!-- Additional Labels for Approved -->
-            <TextView
-                android:id="@+id/approved_name_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name:"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_id" />
-
-            <TextView
-                android:id="@+id/approved_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/approved_name_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_id" />
-
-            <!-- Similar labels for Meal, Area, Table Size, and Date -->
-            <TextView
-                android:id="@+id/approved_meal_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Meal:"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_name" />
-
-            <TextView
-                android:id="@+id/approved_meal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/approved_meal_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_name" />
-
-            <TextView
-                android:id="@+id/approved_area_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Area:"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_meal" />
-
-            <TextView
-                android:id="@+id/approved_area"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/approved_area_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_meal" />
-
-            <TextView
-                android:id="@+id/approved_table_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Table Size:"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_area" />
-
-            <TextView
-                android:id="@+id/approved_table"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/approved_table_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_area" />
-
-            <TextView
-                android:id="@+id/approved_date_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date:"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/approved_table" />
-
-            <TextView
-                android:id="@+id/approved_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/approved_date_label"
-                app:layout_constraintTop_toBottomOf="@id/approved_table" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

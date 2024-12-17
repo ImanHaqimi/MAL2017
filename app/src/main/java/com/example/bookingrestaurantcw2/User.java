@@ -9,28 +9,6 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
-    // No-argument constructor (useful for frameworks and serialization)
-    public User() {
-    }
-
-    // Parameterized constructor
-    public User(int id, String username, String email, String phone, String password) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-    }
-
-    // Constructor with required fields only
-    public User(String username, String email, String phone, String password) {
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-    }
-
-    // Getter and setter for ID
     public int getId() {
         return id;
     }
@@ -39,7 +17,6 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    // Getter and setter for username
     public String getUsername() {
         return username;
     }
@@ -48,7 +25,6 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    // Getter and setter for email
     public String getEmail() {
         return email;
     }
@@ -57,7 +33,6 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    // Getter and setter for phone
     public String getPhone() {
         return phone;
     }
@@ -66,7 +41,6 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    // Getter and setter for password
     public String getPassword() {
         return password;
     }
@@ -75,14 +49,6 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+    // Constructors, getters, and setters
+
 }
