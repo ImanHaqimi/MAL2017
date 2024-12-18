@@ -19,7 +19,7 @@ This project showcases incremental development, with the repository serving as a
    - Integrated push notifications for reservation approvals, updates, or cancellations.  
 3. *Seamless Architecture:*  
    - Built using Android Studio, Java, SQLite, and Retrofit.  
-   - Combines REST API and Firebase for data synchronization and management.  
+   - Combines REST API for data synchronization and management.  
 
 ---
 
